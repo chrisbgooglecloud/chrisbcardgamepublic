@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-60px) scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes lungeRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes lungeLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-lunge-right {
+  animation: lungeRight 0.5s ease-in-out;
+}
+
+.animate-lunge-left {
+  animation: lungeLeft 0.5s ease-in-out;
+}
